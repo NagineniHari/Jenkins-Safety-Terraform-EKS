@@ -58,7 +58,7 @@ resource "aws_lb_target_group" "frontend" {
   target_type = "ip"
   vpc_id   = local.vpc_id
   deregistration_delay = 60 # waiting period before deleting the instance
-
+  
   health_check {
     healthy_threshold = 2
     interval = 10
